@@ -1,0 +1,161 @@
+<html>
+<title>JS Oyun</title>
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script src="main.js"></script>
+
+<style>
+* {margin:0px; padding:0px;}
+body {font-family:"Open Sans", sans-serif; overflow: hidden}
+#fullEkran{height: 100%; background: #eee;}
+#gamePanel{width: 50%; background: #ddd;height: 100%;float:left; position: relative;}
+#skorPanel{width: 50%; background: #262626; height: 100%;float: left;color: #fff; position: relative; text-align: center;}
+#game { width:408px; position: absolute;left: 50%; top: 50%; margin: -204px 0 0 -204px}
+#hucre1,#hucre2,#hucre3,#hucre4 {width:200px; height:200px; float:left; border:2px solid #fff;}
+.kirmizi {background:#E26464; }
+.mavi {background:#66ADE3; }
+.sari {background:#E2DE64; }
+.yesil {background:#86E264; }
+#gameInner{position: relative;}
+#bilgiEkran{position: absolute;left: 0;top:0;height: 408px; width: 408px;background: rgba(0,0,0,0.5);z-index: 100; text-align: center;color:#fff;}
+#puan { font-size:20px; text-align: center;padding-top:20px;background: #262626; color:#fff}
+#clock { font-size:20px;text-align: center;background: #262626; color:#fff}
+#bilgiEkranInner{width: 300px; margin: 0 auto; height: 328px; margin-top: 40px;padding: 10px; box-sizing: border-box;}
+#bilgiEkranInner input{width: 100%; height: 40px; border: 0; background: #ccc; margin-top: 20px; box-sizing: border-box; padding: 0 10px; font-size: 25px;}
+#bilgiEkranInner h4{padding-bottom: 20px; font-size: 30px; border-bottom: 1px solid #fff;}
+#bilgiEkranInner button.gameStart{background: lightgreen;border: 0;width: 100%; box-sizing: border-box; margin-top: 10px; font-size: 25px;}
+#skorPanel .skorPanelInner{
+	width: 408px;
+	height: 408px;
+	background: #212121;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	color: #fff;
+	margin: -204px 0 0 -204px;
+
+}
+#skorPanel table{
+	width: 100%;
+	color: #fff;
+	text-align: center;
+		height: 318px;
+}
+table tr td{
+	border: 1px solid #fff;
+	box-sizing: border-box;
+}
+#skorPanel h3{
+	text-align: center;
+	width: 408px;
+	height: 40px;
+	line-height: 40px;
+
+}
+#skorPanel button{
+	width: 408px;
+	height: 50px;
+	background: #ccc;
+	border: 0;
+}
+</style>
+<body>
+
+<div id="fullEkran">
+	<div id="gamePanel">
+
+		<div id="game">
+			<div id="clock">
+				15 Saniye
+			</div>
+			<div id="gameInner">
+				<div id="bilgiEkran">
+						<div id="bilgiEkranInner">
+							<h4>Giriş Yap</h4>
+							<input type="text" name="" value="" id="kAdi" placeholder="Kullanıcı Adı Yaz">
+							<button type="button" name="button" class="gameStart" onclick="girisYapildi()">Oyunu Başlat</button>
+						</div>
+				</div>
+				<div id="hucre1" onclick="tikKontrol(1)" class="kirmizi"></div>
+				<div id="hucre2" onclick="tikKontrol(2)" class="mavi"></div>
+				<div id="hucre3" onclick="tikKontrol(3)" class="sari"></div>
+				<div id="hucre4" onclick="tikKontrol(4)" class="yesil"></div>
+			</div>
+
+<div id="puan">0 Puan</div>
+		</div>
+
+	</div>
+	<div id="skorPanel">
+		<div class="skorPanelInner">
+
+
+		<h3>Son Skorlar</h3>
+	<table>
+		<tr>
+			<td>#</td>
+			<td>isim</td>
+			<td>Puan</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td id="name1">#</td>
+			<td id="points1">#</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td id="name2">#</td>
+			<td id="points2">#</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td id="name3">#</td>
+			<td id="points3">#</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td id="name4">#</td>
+			<td id="points4">#</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td id="name5">#</td>
+			<td id="points5">#</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td id="name6">#</td>
+			<td id="points6">#</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td id="name7">#</td>
+			<td id="points7">#</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td id="name8">#</td>
+			<td id="points8">#</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td id="name9">#</td>
+			<td id="points9">#</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td id="name10">#</td>
+			<td id="points10">#</td>
+		</tr>
+
+
+
+	</table>
+	<button type="button" name="button" class="temizle">Temizle</button>
+	</div>
+</div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+<html>
+<title>JS Oyun</title>
+<script src="main.js"></script>
+<style>
+* {margin:0px; padding:0px;}
+body {font-family:"Open Sans", sans-serif;}
+
+#game { width:408px; padding:100px;}
+#game div {width:200px; height:200px; float:left; border:2px solid #fff;}
+
+.kirmizi {background:#E26464; }
+.mavi {background:#66ADE3; }
+.sari {background:#E2DE64; }
+.yesil {background:#86E264; }
+
+#puan { font-size:20px; padding-left:180px; padding-top:20px;}
+
+
+</style>
+<body onLoad="oyunBaslat()">
+
+<div id="game">
+
+	<div id="hucre1" onclick="tikKontrol(1)" class="kirmizi"></div>
+	<div id="hucre2" onclick="tikKontrol(2)" class="mavi"></div>
+	<div id="hucre3" onclick="tikKontrol(3)" class="sari"></div>
+	<div id="hucre4" onclick="tikKontrol(4)" class="yesil"></div>
+
+	<div id="puan">0 Puan</div>
+
+</div>
+
+
+</body>
+</html>
